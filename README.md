@@ -1,4 +1,4 @@
-# 🎵 Love Live! song parser of Fandom Wiki
+# 🎵 Aesthetics parser of Fandom Wiki
 ![Logo](logo.png)
 
 ### 🎞 Preview
@@ -19,7 +19,7 @@ the Fandom Wiki site [**love-live.fandom.com**](https://love-live.fandom.com/).
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/Loureas/LoveLiveSongParser
+    git clone https://github.com/Atlatl1807/aesthetics-parser
     ```
 
 2. Install required dependencies:
@@ -47,8 +47,7 @@ the Fandom Wiki site [**love-live.fandom.com**](https://love-live.fandom.com/).
 * * *
 
 ## 🆘 Issues
-If you have any problems while running the script, you can create a new issue on GitHub or write to Telegram [**@Loureas**](https://t.me/Loureas) with a detailed problem.
+If you have any problems while running the script, you can create a new issue on GitHub.
 
 ## 🔧 Contribution
-You can help improve the script algorithm or translate it. Publish changes in Pull Request or Telegram [**@Loureas**](https://t.me/Loureas). All changes will be reviewed.
-
+You can help improve the script algorithm or translate it. Publish changes in Pull Request.
