@@ -4,8 +4,8 @@
 ### 🎞 Preview
 ![Preview](preview.gif)
 
-A Python script that **parses and downloads** songs from different groups Love Live! from
-the Fandom Wiki site [**love-live.fandom.com**](https://love-live.fandom.com/).
+A Python script that **parses and downloads** aesthetics from
+the Fandom Wiki site [**aesthetics.fandom.com**](https://aesthetics.fandom.com/).
 
 ## ⚙️ Requirements
   - [**Python 3.7.X or greater**](https://python.org/)
@@ -13,13 +13,13 @@ the Fandom Wiki site [**love-live.fandom.com**](https://love-live.fandom.com/).
   - [**aiohttp**](https://pypi.org/project/aiohttp/)
 
 ## 💾 Executable binary files (GNU/Linux, Windows)
-[**Releases**](https://github.com/Loureas/LoveLiveSongParser/releases)
+[**Releases**](https://github.com/Loureas/atlatl1807/aesthetics-parser)
 
 ## 📝 Usage
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/Atlatl1807/aesthetics-parser
+    git clone https://github.com/atlatl1807/aesthetics-parser
     ```
 
 2. Install required dependencies:
