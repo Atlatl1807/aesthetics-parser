@@ -17,9 +17,7 @@ from urllib import parse
 if sys.platform == 'win32':
     import ctypes
     ui_id = ctypes.windll.kernel32.GetUserDefaultUILanguage()
-    LANG = locale.windows_locale[ui_id].split('_')[0]
-else:
-    LANG = locale.getdefaultlocale()[0].split('_')[0]
+LANG = 'en'
 PR = Progress()
 
 
@@ -59,7 +57,11 @@ class LLSongs:
         else:
             content = response.content
         result = bs(content, 'html.parser')
-        print('parsed' + aesthetic)
+        #print('parsed ' + aesthetic)
+        PR.print_progress(
+            'Aesthetic' + \
+                ' [' + str(self.__amount_songs) + ']: ' + \
+                aesthetic)
         if 'Redirect to' in str(result):
             return await self.__parse_aesthetic(result.find('a').attrs['href'][6:], session)
         self.__amount_songs += 1
@@ -74,13 +76,13 @@ class LLSongs:
                 if 'wiki' in a.attrs['href']:
                         related_aesthetic = a.attrs['href'][6:]
                         related_aesthetics.append(related_aesthetic)
-                        PR.print_progress(
-                            'Aesthetic' + \
-                            ' [' + str(self.__amount_songs) + ']: ' + \
-                            aesthetic[0] + ' has related aesthetic: ' +  related_aesthetic)
+        #                PR.print_progress(
+        #                    'Aesthetic' + \
+        #                    ' [' + str(self.__amount_songs) + ']: ' + \
+        #f                    aesthetic[0] + ' has related aesthetic: ' +  related_aesthetic)
             except KeyError:
                 pass
-        print('appending ' + aesthetic + 'with related aesthetics: ' + '.'.join(related_aesthetics))
+        print('appending ' + aesthetic + ' with related aesthetics: ' + '.'.join(related_aesthetics))
         self.__songs_list.append({
             "aesthetic": aesthetic,
             "related_aesthetics": related_aesthetics
@@ -107,7 +109,7 @@ class LLSongs:
                     if 'wiki' in a.attrs['href']:
                         aesthetic = a.attrs['href'][6:]
                         tasks.append(loop.create_task(self.__parse_aesthetic(aesthetic, session)))
-                        print('attempting to parse' + aesthetic)
+                        print('attempting to parse ' + aesthetic)
                 except KeyError:
                     pass
         await asyncio.wait(tasks)
